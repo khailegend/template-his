@@ -70,6 +70,7 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
 
   $(document).ready(function () {
     init();
+    localStorage.setItem('tab' , 'khaimeo');
   }); // end document ready function
 
   $(window).on('scroll', function () {
@@ -126,7 +127,6 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     });
   });
 
-
-
+  
 
 })(jQuery); // End jQuery

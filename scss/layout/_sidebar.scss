@@ -398,9 +398,43 @@
   .page-wrapper .page-content {
     overflow-x: hidden;
     .container-fluid {
+        position: relative;  
+      
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 0;
+
+        .container-header {
+          overflow: auto;
+          white-space: nowrap;
+          .nav {
+            // @include flexbox;
+            // @include flex-flow(row);  
+        
+            // overflow-x: auto; 
+            // -webkit-overflow-scrolling: touch;
+            &.addTab {
+              white-space: nowrap;
+              display:block!important;
+              flex-wrap: nowrap;
+              width: 130%;
+              overflow-x: auto;
+              overflow-y: hidden;
+              -webkit-overflow-scrolling: touch;
+            }
+            
+            .nav-item {
+              display: inline-block;
+              .nav-link {
+                width: 100%;
+                i {
+                  padding: 2px;
+                }
+              }
+            }
+          }
+
+        }
     }
   }
   

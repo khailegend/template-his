@@ -188,12 +188,12 @@
                 <div class="sidebar-submenu">
                   <ul>
                     <li>
-                      <a href="#">Tiếp đón bệnh nhân
+                      <a href="#" onclick="addTab('Tiếp nhận bệnh nhân','tabTNBN')">Tiếp đón bệnh nhân
                         <!-- <span class="badge badge-pill badge-success">Pro</span> -->
                       </a>
                     </li>
                     <li>
-                      <a href="#">Danh sách đã đăng ký</a>
+                      <a href="#" onclick="addTab('Danh sách đã đăng ký','tabDSDK')">Danh sách đã đăng ký</a>
                     </li>
                     <li>
                       <a href="#">Lượt đồ theo ngày</a>
@@ -391,7 +391,7 @@
       <main class="page-content">
         <div class="container-fluid">
           <div class="container-header">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <ul class="nav nav-tabs" name="navtab" id="myTab" role="tablist">
               <li class="nav-item">
                 <a class="nav-link  disabled" id="home-tab" data-toggle="tab" href="#home" role="tab"
                   aria-controls="home" aria-selected="true">
@@ -404,19 +404,11 @@
                   aria-controls="profile" aria-selected="false">Tiếp nhận bệnh nhân
                   <i class="fas fa-times"></i>
                 </a>
-
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                  aria-controls="contact" aria-selected="false">Danh sách đã đăng ký
-                  <i class="fas fa-times"></i>
-                </a>
               </li>
             </ul>
           </div>
 
-          <div class="row container-body tab-pane fade show active" id="profile" role="tabpanel"
-            aria-labelledby="profile-tab">
+          <div class="row container-body tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="control">
               <ul class="list-control">
                 <li class="action">
@@ -458,28 +450,28 @@
                 
             
               
-                <div class="col-3 text-center patient-img" >
+                <div class="col-lg-3 col-3 text-center patient-img" >
                   <img id="output_image" height="100px" width="80px" src="/images/img-size/avt-patient.png">
                   <input class="input-img" type="file" accept="image/*" onchange="preview_image(event)" >
                 </div>
 
-                <label class="col-1 info-label" style="margin-top: auto; margin-bottom: 15px;">QR Code:</label>
-                <div class="col-8 input-label " style="margin-top: auto;">
+                <label class="col-lg-1 col-2 info-label" style="margin-top: auto; margin-bottom: 15px;">QR Code:</label>
+                <div class="col-lg-8 col-7 input-label " style="margin-top: auto;">
                   <input class="form-control" type="text" placeholder="Sử dụng quét mã QR của thẻ BHYT" />
                 </div>
 
-                <label class="col-1 info-label imp">Mã BN:</label>
-                <div class="col-2 input-label">
+                <label class="col-lg-1 col-2 info-label imp">Mã BN:</label>
+                <div class="col-lg-2 col-4 input-label">
                   <input class="form-control" type="text" />
                 </div>
 
-                <label class="col-1 info-label imp">Họ và tên:</label>
-                <div class="col-3 input-label">
+                <label class="col-lg-1 col-2 info-label imp">Họ và tên:</label>
+                <div class="col-lg-3 col-4 input-label">
                   <input class="form-control" type="text" />
                 </div>
 
-                <label class="col-1 info-label imp">Giới tính:</label>
-                <div class="col-1 input-label">
+                <label class="col-lg-1 col-2 info-label imp">Giới tính:</label>
+                <div class="col-lg-1 col-4 input-label">
                   <select class="form-control">
                     <option>Nam</option>
                     <option>Nữ</option>
@@ -487,72 +479,72 @@
                   </select>
                 </div>
 
-                <label class="col-1 info-label">Ngày sinh:</label>
-                <div class="col-2 input-label">
+                <label class="col-lg-1 col-2 info-label">Ngày sinh:</label>
+                <div class="col-lg-2 col-4 input-label">
                   <input class="form-control" type="date" />
                 </div>
 
-                <label class="col-1 info-label imp">Năm sinh:</label>
-                <div class="col-1 input-label">
+                <label class="col-lg-1 col-2 info-label imp">Năm sinh:</label>
+                <div class="col-lg-1 col-2 input-label">
                   <input class="form-control" type="text" />
                 </div>
-                <div class="col-1 input-label">
+                <div class="col-lg-1 col-2 input-label">
                   <input class="form-control" type="text" placeholder="tuổi" />
                 </div>
 
-                <label class="col-1 info-label">Địa chỉ:</label>
-                <div class="col-3 input-label">
+                <label class="col-lg-1 col-2 info-label">Địa chỉ:</label>
+                <div class="col-lg-3 col-4 input-label">
                   <input class="form-control" type="text" />
                 </div>
 
-                <label class="col-1 info-label">Tỉnh/Quận/Xã:</label>
-                <div class="col-1 input-label">
+                <label class="col-lg-1 col-3 info-label">Tỉnh/Quận/Xã:</label>
+                <div class="col-lg-1 col-3 input-label">
                   <select class="form-control">
                     <option>Tỉnh</option>
                   </select>
                 </div>
-                <div class="col-1 input-label">
+                <div class="col-lg-1 col-3 input-label">
                   <select class="form-control">
                     <option>Quận</option>
                   </select>
                 </div>
-                <div class="col-2 input-label">
+                <div class="col-lg-2 col-3 input-label">
                   <select class="form-control">
                     <option>Xã</option>
                   </select>
                 </div>
 
-                <label class="col-1 info-label">Dân tộc:</label>
-                <div class="col-2 input-label">
+                <label class="col-lg-1 col-2 info-label">Dân tộc:</label>
+                <div class="col-lg-2 col-4 input-label">
                   <select class="form-control">
                     <option>Kinh</option>
                   </select>
                 </div>
 
-                <label class="col-1 info-label">Quốc gia:</label>
-                <div class="col-3 input-label">
+                <label class="col-lg-1 col-2 info-label">Quốc gia:</label>
+                <div class="col-lg-3 col-4 input-label">
                   <select class="form-control">
                     <option>Việt Nam</option>
                   </select>
                 </div>
 
-                <label class="col-1 info-label">Nghề nghiệp:</label>
-                <div class="col-4 input-label">
+                <label class="col-lg-1 col-2 info-label">Nghề nghiệp:</label>
+                <div class="col-lg-4 col-4 input-label">
                   <input class="form-control" type="text" />
                 </div>
 
-                <label class="col-1 info-label">Người thân:</label>
-                <div class="col-2 input-label">
+                <label class="col-lg-1 col-2 info-label">Người thân:</label>
+                <div class="col-lg-2 col-4 input-label">
                   <input class="form-control" type="text" />
                 </div>
 
-                <label class="col-1 info-label">Quan hệ:</label>
-                <div class="col-3 input-label">
+                <label class="col-lg-1 col-2 info-label">Quan hệ:</label>
+                <div class="col-lg-3 col-4 input-label">
                   <input class="form-control" type="text" />
                 </div>
 
-                <label class="col-1 info-label">SĐT LH:</label>
-                <div class="col-4 input-label">
+                <label class="col-lg-1 col-2 info-label">SĐT LH:</label>
+                <div class="col-lg-4 col-4 input-label">
                   <input class="form-control" type="text" />
                 </div>
 
@@ -915,8 +907,10 @@
           </div> -->
           </div>
 
-
-
+          <div class="row container-body tab-pane fade" id="tabDSDK" role="tabpanel"
+            aria-labelledby="dangky-tab">
+            Tab Đăng ký
+          </div>
 
           <footer class="text-center container-footer">
 
@@ -978,6 +972,7 @@
   <script src="js/common.js"></script>
   <script src="customs/script.js"></script>
 
+
   <script type="text/javascript">
     function preview_image(event) {
       var reader = new FileReader();
@@ -987,7 +982,50 @@
       }
       reader.readAsDataURL(event.target.files[0]);
     }
+
+    let ul = document.querySelector(".nav"); 
+    let count = 0;
+    let arrayTab = [];
+    
+    
+    function addTab(text,id) {
+      let temp = false;
+      
+      if( count > 4 ){
+        $('.nav').addClass('addTab');
+      }
+
+      for(let i = 0; i < arrayTab.length ; i++) {
+        if(arrayTab[i] == id) {
+          temp = true;
+          break;
+        } 
+        else {
+          temp = false;
+        }
+      }
+      
+      if(temp == false) {
+        ul.innerHTML += '<li class="nav-item" id="'+id+'"><a class="nav-link" id="dangky-tab" data-toggle="tab" href="#'+id+'" role="tab" aria-controls="'+id+'" aria-selected="false">'+ text +'<i onclick=deleteTab("'+id+'") class="fas fa-times"></i></a></li>'
+        arrayTab.push(id);
+        count += 1;
+      } 
+    }
+
+    function deleteTab(id) {
+      
+      $("#"+id).remove();
+      console.log(id);
+      for(let i = 0; i < arrayTab.length; i++) {
+        if(arrayTab[i] == id) {
+          arrayTab.splice(i,1);
+          count -= 1;  
+        }   
+      }
+    }
   </script>
+
+  
   <!-- End JavaScript -->
 </body>
 
